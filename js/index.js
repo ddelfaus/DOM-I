@@ -62,8 +62,8 @@ const newNav2 = document.createElement('a');
 newNav2.textContent = "Store";
 
 const navBar = document.querySelector("nav");
-navBar.append(newNav1);
-navBar.append(newNav2);
+navBar.appendChild(newNav1);
+navBar.prepend(newNav2);
 
 newNav1.style.color ='green';
 newNav2.style.color ='green';
