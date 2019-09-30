@@ -69,6 +69,10 @@ newNav1.style.color ='green';
 newNav2.style.color ='green';
 
 
+// html selector
+let htmlBackground = document.querySelector('html');
+htmlBackground.style.background = '#E69A8D'
+
 //nav text color
 
 nav.forEach(element => {
@@ -97,6 +101,14 @@ middleH4[2].textContent = siteContent["main-content"]["services-h4"];
 middleH4[3].textContent = siteContent["main-content"]["product-h4"];
 middleH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
+middleH4.forEach(element => {
+  element.style.color = 'purple'
+  element.style.fontSize = '3rem'
+  
+})
+
+
+
 let middleP = Array.from(document.querySelectorAll('.text-content p'))
 middleP[0].textContent = siteContent["main-content"]["features-content"];
 middleP[1].textContent = siteContent["main-content"]["about-content"];
@@ -123,3 +135,19 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+
+
+
+
+
+
+//Event listener
+
+logo.addEventListener('mouseover', (event) => {
+  htmlBackground.style.background = 'white';
+})
+
+codeImg.addEventListener('click', (event) => {
+  htmlBackground.style.background = '#E69A8D'
+})
